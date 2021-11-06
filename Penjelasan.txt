@@ -1,0 +1,52 @@
+Nama	: Mohammad Prayoga Pangestu
+Kelas	: 5C
+Nim	: 19090034
+
+#####################################################################################
+
+Pertama desain database sesuai dengan kebutuhan user
+setelah mempunyai ide atau gagsan untuk membuat sebuah 
+rancangann ETL saya langsung membuat inialisasi table didatabase 
+untuk database nya saya menggunakan FULL MYSQL
+
+import database sumber ke dalam mysql saya menamainya dengan nama warehouse
+karena sumber data bersifat classicmodels maka ketika meng import 
+semua data maka secara otomatis akan masuk ke dalam sebuah database classicmodels
+
+setelah database berhasil diimport buat sebuah tabel yang telah didesai sebelumnya
+saya membuat sebuah 4 tabel dimensi dan 1 tabel fakta 
+dimana masing masing tabel saya beri nama :
+1. Tabel dimensi Customer
+2. Tabel dimensi Karyawan
+3. Tabel dimensi Kantor
+4. Tabel dimensi Waktu, 
+	dan satu tabel fakta 
+5. Tabel FAKTA 
+jangan lupa kasih tipe data di masing masing tabel dan panjang valuenya
+
+setelah bethasil membuat sebuah database dan masing masing tabel serta tipedata
+dan value saya menerapkan sebuah proses ETL di dalam Tools PENTAHO DATA INTEGRATION
+
+untuk desain pertama saya membuat sebuah tabel dimensi bernama dimensi customer
+desainya menggunakan :
+Tabel Input 	: digunakan untuk mengambil sebuah data atau nilai di dalam database 
+		  classicmodels, ambil beberapa value yang di butuhkan
+Add Sequence	: Proses Penambahan sebuah data berdasarkan ID yang nantinya akan 
+		  di teruskan ke dalam data warehouse
+Insert/update	: Proses Penambahan data yang tadinya di dalam sumber data asli
+		  kemudian diolah dan ditampung kedalam data warehouse
+## untuk proses pembuatan tabel dimensi lainya sama hanya beda saat membuat tabel dimensi waktu 
+karena pada proses membuat tabel dimensi waktu perlu menambahkan beberapa komponen seperti 
+- Generate rows
+- Add sequence
+- Calculator
+- Data grid 
+- Stream lookup
+- Modified javascript
+- Insert/Update
+apabila terdapat satu kesalah dalam penerapan atau proses di dalam komponen diatas 
+maka tabel dimensi waktu tidak akan ter create atau terbuat 
+Dan Tabel Terakhir adalah membuat tabel fakta , tujuanya adalam meringkas proses ETL 
+ditabel tabel sebelumnya dan menjadikanya di dalam 1 tabel FAKTA
+
+
